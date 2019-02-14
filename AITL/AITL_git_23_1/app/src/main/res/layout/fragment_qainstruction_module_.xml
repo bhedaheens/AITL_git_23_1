@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.QandAModule.QAInstructionModule_Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btn_goBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/GrayColor"
+        android:text="Go Back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_goBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:weightSum="2">
+
+
+                <Button
+                    android:id="@+id/btn_refresh"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.7"
+                    android:background="@drawable/btn_accpet_layout"
+                    android:drawableRight="@drawable/ic_img_reload"
+                    android:paddingLeft="10dp"
+                    android:text="Refresh"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:visibility="visible"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1.3"
+                    android:gravity="left"
+                    android:layout_marginLeft="1dp"
+                    android:padding="2dp"
+                    android:textSize="15dp"
+                    android:text="@string/qatxt_refreshinstruction"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/qa_accept"
+                    android:tint="@color/green" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1.3"
+                    android:gravity="left"
+                    android:padding="2dp"
+                    android:textSize="15dp"
+                    android:text="@string/qatxt_acceptistruction"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/qa_show_mainscreen"
+                    android:tint="@color/btn_blue" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1.3"
+                    android:gravity="left"
+                    android:padding="2dp"
+                    android:textSize="15dp"
+                    android:text="@string/qatxt_showonMainScreeninstruction"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <ImageView
+
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/qa_hide" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1.3"
+                    android:gravity="left"
+                    android:padding="2dp"
+                    android:textSize="15dp"
+                    android:text="@string/qatxt_hideinstruction"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/qa_unhide" />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="1.3"
+                    android:gravity="left"
+                    android:padding="2dp"
+                    android:textSize="15dp"
+                    android:text="@string/qatxt_unhideinstruction"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

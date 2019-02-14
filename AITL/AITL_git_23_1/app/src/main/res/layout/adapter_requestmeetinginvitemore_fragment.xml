@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/app_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardElevation="3dp">
+
+        <RelativeLayout
+            android:id="@+id/layout_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <FrameLayout
+                android:id="@+id/img_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <!--<ProgressBar-->
+                <!--android:id="@+id/progressBar1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:visibility="visible"-->
+                <!--android:layout_gravity="center_vertical" />-->
+
+
+                <ImageView
+                    android:id="@+id/user_sqrimage"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:visibility="visible"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/defult_attende" />
+
+                <TextView
+                    android:id="@+id/txt_profileName"
+                    android:layout_height="70dp"
+                    android:layout_width="70dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_15sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+            </FrameLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/img_frame"
+                android:layout_toRightOf="@+id/img_frame"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_toLeftOf="@+id/img_star"
+                    android:layout_toStartOf="@+id/img_star">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Bhavdip Dhameliya"
+                        android:textColor="@color/SearchTxtcolor"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/user_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:text="Android Developers at Elsner"
+                        android:textColor="@color/SearchTxtcolor"
+                        android:textSize="13dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+
+                <CheckBox
+                    android:id="@+id/check_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical|center_horizontal"
+                    android:tint="@color/GrayColor"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

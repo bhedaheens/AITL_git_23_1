@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/DialogFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/white"
+        android:gravity="right">
+
+        <ImageView
+            android:id="@+id/btncardclose_dailog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:paddingRight="16dp"
+            android:src="@drawable/ic_close_gray" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="30dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_launcher"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtAppName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/txtAppName"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="@string/txtcardLayoutSoft"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/GrayColor"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/ViewColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <EditText
+                    android:id="@+id/cardholderNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/backgroundround"
+                    android:drawableLeft="@drawable/ic_credit_card"
+                    android:hint="@string/txtCardNumber"
+                    android:inputType="number"
+                    android:maxLength="16"
+                    android:padding="@dimen/_10sdp"
+                    android:textColorHint="@color/hintcolor"
+                    android:textSize="15dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <EditText
+                        android:id="@+id/cardMonth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_7sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/backgroundround"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:hint="@string/txtexpirationDate"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="@dimen/_10sdp"
+                        android:textColorHint="@color/hintcolor"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:id="@+id/cardYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/backgroundround"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:hint="@string/txtExyear"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:padding="@dimen/_10sdp"
+                        android:textColorHint="@color/hintcolor"
+                        android:textSize="15dp" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/cvvnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/backgroundround"
+                    android:drawableLeft="@drawable/ic_locked"
+                    android:hint="@string/edtCVVNumber"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:padding="@dimen/_10sdp"
+                    android:textColorHint="@color/hintcolor"
+                    android:textSize="15dp" />
+
+                <Button
+                    android:id="@+id/carddialog_btnPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/btn_bid"
+                    android:text="@string/txtPaymentInfo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

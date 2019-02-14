@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_all"
+        android:title="@string/menu_all"
+        />
+    <item
+        android:id="@+id/menu_accepted1"
+        android:title="@string/menu_accepted" />
+
+    <item
+        android:id="@+id/menu_pending1"
+        android:title="@string/menu_pending" />
+
+    <item
+        android:id="@+id/menu_rejected1"
+        android:title="@string/menu_rejected" />
+</menu>

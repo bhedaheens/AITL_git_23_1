@@ -1,0 +1,187 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_static"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:id="@+id/linear_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linear_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/linear_filterdropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/txt_filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="FILTERS"
+                        android:padding="5dp"
+                        app:font_name="bold"
+                        android:layout_gravity="center"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="15dp"
+                        android:gravity="center"
+                        android:src="@drawable/down_arrow" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/linear_filerdailog"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <Button
+                    android:id="@+id/btn_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="@string/filter" />
+
+                <LinearLayout
+                    android:id="@+id/linear_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        app:font_name="bold"
+                        android:textStyle="bold"
+                        android:textColor="@color/red"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/remove_filters" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_close_gray"
+                        android:tint="@color/red"/>
+
+                </LinearLayout>
+
+                <ExpandableListView
+                    android:id="@+id/category_expand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/linear_button"
+                    android:childDivider="#00000000"
+                    android:focusable="false"
+                    android:groupIndicator="@null"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linear_edtRecyclerview"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/attendee_fulldirectory_search_view"
+                    android:drawableRight="@android:drawable/ic_menu_search"
+                    android:hint="@string/searchText"
+
+                    android:imeOptions="actionSearch"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="9dp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_viewFullAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewNoDATA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="@string/txtNoDataFound"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+    </RelativeLayout>
+</RelativeLayout>

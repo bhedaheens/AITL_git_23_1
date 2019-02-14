@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+
+    <LinearLayout
+        android:id="@+id/linear_speakerAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@color/card_back"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.allintheloop.Util.BoldTextView
+                android:id="@+id/sessionName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:font_name="bold"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/speaker_list_subtitleColor"
+                android:text="Opening Marketing Lecture"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_session_type_icon" />
+
+                <com.allintheloop.Util.BoldTextView
+                    android:id="@+id/txt_sessionType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Lecture"
+                    android:textColor="@color/speaker_list_subtitleColor"
+                    app:font_name="light"
+                    android:textSize="17sp" />
+
+                <com.allintheloop.Util.BoldTextView
+                    android:id="@+id/txt_sessionTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:text="09:00 am"
+                    android:textColor="@color/speaker_list_subtitleColor"
+                    app:font_name="light"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.2"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_metting_icon" />
+
+                <com.allintheloop.Util.BoldTextView
+                    android:id="@+id/txt_sessionLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:font_name="light"
+                    android:textColor="@color/speaker_list_subtitleColor"
+                    android:layout_weight="1"
+                    android:text="Metting Room A"
+                    android:textSize="17sp" />
+
+                <com.allintheloop.Util.BoldTextView
+                    android:id="@+id/txt_sessionDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:textColor="@color/speaker_list_subtitleColor"
+                    app:font_name="light"
+                    android:text="04/27/2017"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>

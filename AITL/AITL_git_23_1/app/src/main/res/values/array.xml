@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="note_iten">
+        <item>View Notes</item>
+        <item>Add Notes</item>
+    </string-array>
+
+
+    <string-array name="noti">
+        <item>See All Private</item>
+        <item>See All Public</item>
+    </string-array>
+
+    <string-array name="single_note_iten">
+        <item>Add Notes</item>
+    </string-array>
+
+    <string-array name="imageItem">
+        <item>Gallary</item>
+        <item>Camera</item>
+    </string-array>
+
+
+    <string-array name="itemAction">
+        <item>Edit</item>
+        <item>Delete</item>
+    </string-array>
+
+</resources>

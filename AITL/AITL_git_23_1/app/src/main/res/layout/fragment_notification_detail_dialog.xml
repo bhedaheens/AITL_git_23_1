@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/frame_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:background="@drawable/roundedtextview_graycolor">
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1.7"
+            android:layout_gravity="center"
+            android:inputType="textMultiLine"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/dailog_close"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:clickable="true"
+            android:padding="9dp"
+            android:src="@drawable/ic_close_button" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_contain"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:padding="8dp"
+                android:textSize="20dp"
+                android:text=""/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

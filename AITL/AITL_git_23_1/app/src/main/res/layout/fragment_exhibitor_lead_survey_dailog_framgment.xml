@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white"
+    tools:context="com.allintheloop.Fragment.SurveyModule.Survey_Fragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!-- TODO: Update blank fragment layout -->
+            <LinearLayout
+                android:id="@+id/linear_question_page"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <com.allintheloop.Util.HomeCustomViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/survey_btn"
+                        android:text="@string/left_arrow"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_next"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/survey_btn"
+                        android:text="@string/right_arrow"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_Qsfinish"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/survey_btn"
+                        android:text="@string/right_arrow1"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_btn_extra"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="3">
+
+                    <Button
+                        android:id="@+id/btn_rest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/survey_btn"
+                        android:textAllCaps="false"
+                        android:text="Reset"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:layout_weight="1"
+                        android:text="Save"
+                        android:background="@drawable/survey_btn"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

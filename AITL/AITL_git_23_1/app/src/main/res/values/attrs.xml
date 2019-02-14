@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="isTablet">true</bool>
+    <declare-styleable name="BoldTextView">
+        <attr name="font_name" >
+            <enum value="1" name="bold"/>
+            <enum value="2" name="light"/>
+            <enum value="3" name="regular"/>
+        </attr>
+    </declare-styleable>
+</resources>

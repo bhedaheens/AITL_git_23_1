@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_detailbackcolor"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_close" />
+
+        <View
+            android:id="@+id/view_breakLine"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/img_close"
+            android:background="@color/darkGray"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_below="@+id/view_breakLine">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.allintheloop.Util.BoldTextView
+                    android:id="@+id/txt_boldText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Question Here"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    ads:font_name="bold" />
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/piechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txt_boldText"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone" />
+
+                <com.allintheloop.Util.BoldTextView
+                    android:id="@+id/txt_noResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    ads:font_name="bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <!-- TODO: Update blank fragment layout -->
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

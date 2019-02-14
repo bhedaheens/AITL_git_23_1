@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white"
+    tools:context="com.allintheloop.Fragment.NotificationListing_Fragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_viewNotification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:scrollbars="none" />
+
+    <ImageView
+
+        android:layout_height="150dp"
+        android:layout_width="150dp"
+        android:src="@drawable/big_bell_icon"
+        android:id="@+id/imageView2"
+        android:layout_above="@+id/no_data"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/_15sdp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="208dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

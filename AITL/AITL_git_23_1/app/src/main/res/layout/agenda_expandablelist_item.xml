@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/backgroundround"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/agenda_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/linear_agendaHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroundround"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=""
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ViewColor"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.9"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_speaker_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_agenda_user"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/txt_placeLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_agenda_flag"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="12dp" />
+
+
+                <TextView
+                    android:id="@+id/txt_locationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_agenda_palce"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_sessionImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:padding="@dimen/_5sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_metting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroundround"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/txt_Mettingname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="6dp"
+            android:text=""
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txt_Mettingtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:text=""
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/txt_standNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="6dp"
+            android:text=""
+            android:textSize="15dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_MettingStatus"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text=""
+            android:gravity="center"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

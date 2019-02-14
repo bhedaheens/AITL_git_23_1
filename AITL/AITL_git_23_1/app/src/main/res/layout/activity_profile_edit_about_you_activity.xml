@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.EditProfileModule.ProfileEditAboutYou_activity">
+
+    <RelativeLayout
+        android:id="@+id/linear_topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_navigation_chevron_left" />
+
+
+        <com.allintheloop.Util.BoldTextView
+            android:layout_width="wrap_content"
+            android:text="About You"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:font_name="bold"
+            android:paddingLeft="2dp"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_saveButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:padding="7dp"
+
+        android:layout_height="wrap_content">
+
+
+
+        <com.allintheloop.Util.BoldTextView
+            android:id="@+id/txt_count"
+            android:layout_width="match_parent"
+            android:text="10 Sections Left"
+            app:font_name="bold"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:layout_toLeftOf="@+id/txt_save"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+
+        <com.allintheloop.Util.BoldTextView
+            android:id="@+id/txt_save"
+            android:layout_width="130dp"
+            android:layout_alignParentRight="true"
+            android:text="Save"
+            android:background="@drawable/attendee_detail_button_drawable"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:textStyle="bold"
+            app:font_name="bold"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_topLayout"
+        android:layout_above="@+id/relative_saveButton"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.allintheloop.Util.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose up to 10 selections"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:font_name="bold" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_margin="10dp"
+            android:imeOptions="actionSearch"
+            android:background="@drawable/edittext_roundedcornar_profile"
+            android:drawableLeft="@drawable/ic_action_search"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:textColorHint="@color/black"
+            android:hint="Search  Selections"
+            android:scrollbars="vertical" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_categoeyListing"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+
+    
+</RelativeLayout>

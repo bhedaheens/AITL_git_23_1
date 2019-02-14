@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "535742874427",
+    "firebase_url": "https://aitl-3eaae.firebaseio.com",
+    "project_id": "aitl-3eaae",
+    "storage_bucket": "aitl-3eaae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535742874427:android:d7173517b7280db2",
+        "android_client_info": {
+          "package_name": "com.allintheloop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "535742874427-3bd1oml2o9k80pl4k5v0k7iuhfuhdosi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.allintheloop",
+            "certificate_hash": "926b0a3722704bea87c0e9618d5154d39931818c"
+          }
+        },
+        {
+          "client_id": "535742874427-076cvh3viu41g756tkpm9m2nog7c4er2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfqeqjmt-R6vyjjLGYpu-4edwrqQmmLWk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "535742874427-076cvh3viu41g756tkpm9m2nog7c4er2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "535742874427-bhj14k7sqs1nuliqp6lut9bdhvp771af.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.CoolLogistics"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

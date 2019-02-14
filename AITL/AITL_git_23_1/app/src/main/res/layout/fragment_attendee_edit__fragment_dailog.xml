@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/frame_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_fullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:inputType="textCapSentences"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/txtAccountInformtion"
+                    android:textColor="@color/GrayColor"
+                    android:textSize="@dimen/_10sdp" />
+
+
+                <ImageView
+                    android:id="@+id/dailog_profile_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right|top"
+                    android:clickable="true"
+                    android:padding="9dp"
+                    android:src="@drawable/ic_close_button" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <ProgressBar
+                            android:id="@+id/progressBar1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:visibility="visible" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/profile_image"
+                            android:layout_width="120dp"
+                            android:layout_height="123dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="2dp"
+                            android:visibility="visible" />
+
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/txt_selectImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/roundedtextview_graycolor"
+                        android:drawableLeft="@drawable/ic_landscape"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/txtSelectImage"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:padding="8dp"
+                        android:text="@string/firstName"/>
+
+
+                    <EditText
+                        android:id="@+id/edt_firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/GrayColor"
+                        android:background="@drawable/square_bg"
+                        android:hint="@string/firstName"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:padding="8dp"
+                        android:text="@string/lastName"/>
+
+
+                    <EditText
+                        android:id="@+id/edt_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/square_bg"
+                        android:hint="@string/lastName"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textColor="@color/GrayColor"
+                        android:textSize="17dp" />
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:padding="8dp"
+                        android:text="@string/txtcmpName"/>
+
+                    <EditText
+                        android:id="@+id/edt_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:background="@drawable/square_bg"
+                        android:hint="@string/txtcmpName"
+                        android:inputType="textCapSentences"
+                        android:textColor="@color/GrayColor"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/survey_question"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:text="@string/btnUpdate"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash" />
+
+    <LinearLayout
+        android:id="@+id/linear_mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:weightSum="11">
+
+            <RelativeLayout
+                android:id="@+id/relative_top"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="7.5"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/btnSecureKey"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3.5"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edt_secureKey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/entersecurekey_drawable"
+                    android:cursorVisible="false"
+                    android:gravity="center"
+                    android:hint="@string/txtEnterSecretKey"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:minWidth="250dp"
+                    android:padding="10dp"
+                    android:textColor="@color/darkGray"
+                    android:textColorHint="@color/darkGrayColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

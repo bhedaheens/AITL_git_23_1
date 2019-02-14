@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context="com.allintheloop.Fragment.GroupModuleList.MapGroupListFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Data"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <!-- TODO: Update blank fragment layout -->
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/edittext_backcolor"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+
+                    <EditText
+                        android:id="@+id/edt_search"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/search_rounded"
+                        android:drawableLeft="@android:drawable/ic_menu_search"
+                        android:hint="@string/searchText"
+                        android:maxLines="1"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_viewQandAGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_agendaNoTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="No Group Found"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_forceLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_nologin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/txt_forceLogin"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

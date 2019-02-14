@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardHeader"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardPreventCornerOverlap="false">
+
+    <com.allintheloop.Util.BoldTextView
+        android:id="@+id/sectionHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:font_name="bold"
+        android:padding="6dp"
+        android:textSize="15sp"
+        android:text=""
+        android:textStyle="bold"/>
+
+</android.support.v7.widget.CardView>

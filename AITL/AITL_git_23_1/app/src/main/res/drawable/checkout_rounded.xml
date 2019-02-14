@@ -1,0 +1,15 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/survey_question" />
+
+    <stroke
+        android:width="2dp"
+        android:color="@color/survey_question" />
+
+    <corners
+        android:bottomLeftRadius="120dp"
+        android:bottomRightRadius="120dp"
+        android:topLeftRadius="120dp"
+        android:topRightRadius="120dp" />
+
+</shape>

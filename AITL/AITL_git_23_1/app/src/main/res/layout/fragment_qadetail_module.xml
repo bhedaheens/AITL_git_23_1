@@ -1,0 +1,291 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/frame_bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true">
+
+
+            <LinearLayout
+                android:id="@+id/linear_moderatorInstruction"
+                android:layout_width="match_parent"
+                android:background="@color/black"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_moderaotInstrucion"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/qatxt_moderatorInstruction"
+                    android:layout_height="wrap_content"
+                    />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/linear_askHideQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/ask_question"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:padding="13dp"
+                        android:text="Ask a Question"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/txt_viewHidden"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:padding="13dp"
+                        android:text="@string/qa_txthiddenQuestion"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_askQuestion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/ask_question_fullLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:padding="13dp"
+                        android:text="Ask a Question"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/frame_bottomView"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/linear_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_sessionName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@color/GrayColor"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/edittext_backcolor"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_sessiondesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:visibility="gone"
+                            android:text=""
+                            android:textColor="@color/finddevice_topColor"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_timeDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="8dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/txt_sessiondate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/finddevice_topColor"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_start"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="6dp"
+                                android:gravity="center"
+                                android:text=" START : "
+                                android:textColor="@color/finddevice_topColor"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/txt_startTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/finddevice_topColor"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_end"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="6dp"
+                                android:gravity="center"
+                                android:text=" END : "
+                                android:textColor="@color/finddevice_topColor"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_endTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=""
+                                android:textColor="@color/finddevice_topColor"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/break_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_marginTop="29dp"
+                            android:background="@color/GrayColor" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/txt_hint"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:padding="13dp"
+                        android:text="@string/qadetail_hint"
+                        android:textColor="@color/speaker_documentfontColor"
+                        android:textStyle="bold" />
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_viewQaVoteData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        android:padding="4dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:background="@drawable/btn_accpet_layout"
+        android:drawableRight="@drawable/ic_img_reload"
+        android:paddingLeft="10dp"
+        android:text="Refresh"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:visibility="visible"
+        app:layout_anchor="@id/break_line"
+        app:layout_anchorGravity="center_horizontal" />
+</android.support.design.widget.CoordinatorLayout>

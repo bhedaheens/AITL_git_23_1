@@ -1,0 +1,652 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/linear_profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/frame_viewpager"
+            android:layout_width="match_parent"
+            android:padding="7dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <com.allintheloop.Util.BoldTextView
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                app:font_name="bold"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <com.allintheloop.Util.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Edit My Profile"
+                android:textColor="@color/speaker_list_titleColor"
+                android:textSize="20sp"
+                app:font_name="bold"
+                android:textStyle="bold" />
+
+            <com.allintheloop.Util.BoldTextView
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                app:font_name="bold"
+                android:text="Done"
+                android:textColor="@color/speaker_list_titleColor"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/lightGray"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/frame_viewpager">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.9">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="8dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center">
+
+                                    <ProgressBar
+                                        android:id="@+id/progressBar1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_gravity="center"
+                                        android:visibility="visible" />
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/profile_image"
+                                        android:layout_width="100dp"
+                                        android:layout_height="100dp"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/profile"
+                                        android:visibility="visible" />
+
+                                </FrameLayout>
+
+                                <TextView
+                                    android:id="@+id/txt_profile_edit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:padding="5dp"
+                                    android:text="Edit Profile Picture"
+                                    android:textColor="@color/txt_link"
+                                    android:textStyle="bold"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lay_social"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/btnLoginWithFace"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/facebook_icon"
+                            android:visibility="visible" />
+
+                        <ImageView
+                            android:id="@+id/img_linkedin"
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ln_connectnbrn"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/lightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/lbl_firstname"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2dp"
+                            app:font_name="light"
+                            android:text="First Name"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp" />
+
+
+                        <EditText
+                            android:id="@+id/txt_firstname"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:background="@drawable/custom_edittext_underline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/lbl_surName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2dp"
+                            android:text="Last Name"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/txt_surName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:background="@drawable/custom_edittext_underline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/lbl_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2dp"
+                            android:text="@string/job_title"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/txt_title"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:background="@drawable/custom_edittext_underline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/lbl_company"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2dp"
+                            app:font_name="light"
+                            android:text="@string/company"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="11dp" />
+
+                        <EditText
+                            android:id="@+id/txt_company"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:background="@drawable/attendee_company_edit_drawble"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/lightGray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_hideProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="18dp">
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="2dp"
+                        app:font_name="bold"
+                        android:text="@string/hideMyIdentity"
+                        android:textColor="@color/txt_link"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/swith_identifyProfile"
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dp"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:theme="@style/swtich_style" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_breakLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:background="@color/lightGray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="10">
+
+                        <TextView
+                            android:id="@+id/lbl_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="2dp"
+                            android:text="@string/email_address_user_id"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp" />
+
+                        <EditText
+                            android:id="@+id/txt_email"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:background="@drawable/custom_edittext_underline"
+                            android:padding="5dp"
+                            android:text=""
+                            android:editable="false"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+
+                            android:orientation="horizontal"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/lbl_password"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@string/password"
+                                android:textColor="@color/speaker_list_titleColor"
+                                android:textSize="13sp" />
+
+                            <EditText
+                                android:id="@+id/txt_password"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:background="@drawable/custom_edittext_underline"
+                                android:inputType="textPassword"
+                                android:maxLines="2"
+                                android:padding="5dp"
+                                android:text=""
+                                android:textColor="@color/speaker_list_titleColor"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear_reTypePassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            android:weightSum="10">
+
+                            <TextView
+                                android:id="@+id/lbl_repassword"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:paddingBottom="2dp"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="2dp"
+                                android:text="@string/confirm_password"
+                                android:textColor="@color/speaker_list_titleColor"
+                                android:textSize="13sp" />
+
+                            <EditText
+                                android:id="@+id/txt_repassword"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:background="@drawable/custom_edittext_underline"
+                                android:inputType="textPassword"
+                                android:padding="5dp"
+                                android:text=""
+                                android:textColor="@color/speaker_list_titleColor"
+                                android:textSize="13sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.facebook.login.widget.LoginButton
+                        android:id="@+id/btnface_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_mainGols"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:id="@+id/relative_goals"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/linear_goalsLabel"
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:layout_width="wrap_content"
+                                android:text="@string/my_goals"
+                                app:font_name="bold"
+                                android:textStyle="bold"
+                                android:padding="5dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:textSize="17sp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/dark_gray"
+                                android:layout_height="wrap_content" />
+
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:id="@+id/txt_goals"
+                                android:layout_width="wrap_content"
+                                android:text=""
+                                app:font_name="bold"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:textColor="@color/dark_gray"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/gola_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_alignRight="@+id/linear_goalsLabel"
+                            android:text="@string/edit"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="18dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            app:font_name="bold"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/attendee_profile_goal_edit_drawable"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_about"
+                        android:layout_width="match_parent"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/linear_about"
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            android:layout_height="wrap_content">
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:layout_width="wrap_content"
+                                android:text="ABOUT YOU"
+                                app:font_name="bold"
+                                android:textStyle="bold"
+                                android:padding="5dp"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center"
+                                android:textSize="17sp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/dark_gray"
+                                android:layout_height="wrap_content" />
+
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:id="@+id/txt_about"
+                                android:layout_width="wrap_content"
+                                android:text=""
+                                app:font_name="bold"
+                                android:padding="5dp"
+                                android:textStyle="bold"
+                                android:textSize="14sp"
+                                android:textColor="@color/dark_gray"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/about_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_alignRight="@+id/linear_about"
+                            android:text="@string/edit"
+                            android:paddingTop="6dp"
+                            android:paddingBottom="6dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="18dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            app:font_name="bold"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/attendee_profile_goal_edit_drawable"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_additional"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

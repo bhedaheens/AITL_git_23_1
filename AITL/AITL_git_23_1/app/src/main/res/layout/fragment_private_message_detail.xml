@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/lineaer_photoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+
+
+            <ProgressBar
+                android:id="@+id/img_proress"
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:visibility="visible"
+                android:layout_gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_profileName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/btn_viewProfile"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/linear_userInfo"
+            android:layout_alignBottom="@+id/linear_userInfo"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/survey_btn"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="View Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_userInfo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/frameLayout2"
+            android:layout_toRightOf="@+id/frameLayout2">
+
+            <TextView
+                android:id="@+id/txt_userName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_companyName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"
+        android:layout_below="@+id/lineaer_photoLayout"
+        android:background="@color/private_backcolor"
+        android:paddingTop="8dp"
+        android:scrollbars="vertical"
+        app:stackFromEnd="true" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:hint="Enter message"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="3"
+            android:padding="12dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/linearimage_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_img_gallary_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:id="@+id/frmphotoclick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/ring"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/btnaddphotos"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/ring"
+                        android:clickable="true"
+                        android:src="@drawable/defult_attende"
+                        android:visibility="gone" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:background="@drawable/linearlayout_bg"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/chk_lightblue"
+            android:padding="10dp"
+            android:clickable="true"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/linear_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/survey_btn"
+                android:orientation="horizontal"
+                android:padding="-10dp">
+                <Button
+                    android:id="@+id/btn_addPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/survey_question"
+                    android:text="Add Photo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/img_addphotobtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_image_photo_camera" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_marginEnd="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/survey_btn"
+                android:text="SEND"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

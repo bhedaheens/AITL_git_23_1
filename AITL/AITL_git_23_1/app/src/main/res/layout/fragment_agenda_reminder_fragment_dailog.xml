@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:context="com.allintheloop.Fragment.AgendaModule.AgendaReminderFragmentDailog">
+
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgclose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:src="@drawable/ic_close_button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/txt_setReminder"
+                android:textSize="20dp"
+                android:id="@+id/textView2"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_fiveMin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:background="@drawable/survey_btn"
+                android:text="@string/txt_5min"/>
+
+            <Button
+                android:id="@+id/btn_fifteenMin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/survey_btn"
+                android:text="@string/txt_10min"/>
+
+            <Button
+                android:id="@+id/btn_thirtyMin"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/survey_btn"
+                android:text="@string/txt_15min"/>
+
+
+            <Button
+                android:id="@+id/btn_noAlert"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_accpet_layout"
+                android:text="@string/txt_noAlert"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

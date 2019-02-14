@@ -1,0 +1,418 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:id="@+id/layout_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/full_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text=""
+                        android:textColor="@color/SearchTxtcolor"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:font_name="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.allintheloop.Util.CoordinatedImageView
+                            android:id="@+id/img_frame"
+                            android:layout_width="220dp"
+                            android:layout_height="220dp"
+                            android:layout_gravity="center"
+                            android:visibility="visible">
+
+                            <ProgressBar
+                                android:id="@+id/progressBar1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/speaker_img"
+                                android:layout_width="155dp"
+                                android:layout_height="155dp"
+                                android:layout_gravity="center"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/txt_profileName"
+                                android:layout_width="155dp"
+                                android:layout_height="155dp"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="50sp"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/speaker_fav"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginBottom="6dp"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:src="@drawable/ic_star_normal"
+                                android:visibility="gone" />
+
+
+                        </com.allintheloop.Util.CoordinatedImageView>
+                    </LinearLayout>
+
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/designation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="1dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:font_name="bold" />
+
+                    <Button
+                        android:id="@+id/btn_askQuestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/attendee_detail_button_drawable"
+                        android:text="@string/btnAskQuestion"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:visibility="visible" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/btn_seeMyMetting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/survey_btn"
+                            android:drawableLeft="@drawable/ic_meeting_request"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/btnseeRequestMetting"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_request"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/survey_btn"
+                            android:drawableLeft="@drawable/ic_meeting_request"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:text="@string/btnRequestMetting"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/session_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/card_back"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="visible"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:id="@+id/img_leftArrowagenda"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/ic_hardware_keyboard_arrow_left" />
+
+                    <com.allintheloop.Util.HomeCustomViewPager
+                        android:id="@+id/rv_viewSession"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="2.4"
+                        android:visibility="visible" />
+
+
+                    <ImageView
+                        android:id="@+id/img_rightArrowagenda"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.3"
+                        android:src="@drawable/ic_navigation_chevron_right" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/webView_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    card_view:cardCornerRadius="2dp"
+                    card_view:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/label"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="left"-->
+                        <!--android:gravity="center"-->
+                        <!--android:padding="10dp"-->
+                        <!--android:text="@string/btnBiography"-->
+                        <!--android:textSize="20dp"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:visibility="visible" />-->
+
+
+                        <WebView
+                            android:id="@+id/webview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_document"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Document" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_viewDocument"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/agendaSpeakerBackcolor"
+                                android:orientation="horizontal" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/linear_social"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:id="@+id/btn_linkin"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/card_back"
+                                android:drawableRight="@drawable/ic_navigation_chevron_right"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Linkedin"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                android:textColor="@color/speaker_list_titleColor"
+                                app:font_name="regular" />
+
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:id="@+id/btn_twitter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+
+                                android:drawableRight="@drawable/ic_navigation_chevron_right"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="15dp"
+                                android:textSize="17sp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="Twitter"
+                                android:textStyle="bold"
+                                android:textColor="@color/speaker_list_titleColor"
+                                android:visibility="gone"
+                                app:font_name="regular" />
+
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:id="@+id/btn_fb"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/card_back"
+
+                                android:drawableRight="@drawable/ic_navigation_chevron_right"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                android:textSize="17sp"
+                                android:paddingBottom="5dp"
+                                android:text="Facebook"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                android:textColor="@color/speaker_list_titleColor"
+                                app:font_name="regular" />
+
+
+                            <com.allintheloop.Util.BoldTextView
+                                android:id="@+id/btn_instagram"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+
+                                android:drawableRight="@drawable/ic_navigation_chevron_right"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="15dp"
+                                android:paddingTop="5dp"
+                                android:textSize="17sp"
+                                android:paddingBottom="5dp"
+                                android:text="Instagram"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                android:textColor="@color/speaker_list_titleColor"
+                                app:font_name="regular" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/textViewNoDATA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_load_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/survey_btn"
+                    android:padding="10dp"
+                    android:text="@string/btnLoadMore"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_nospeaker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/textwholeNoDATA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="No Speaker Detail Found"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimary"
+            android:visibility="visible" />
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

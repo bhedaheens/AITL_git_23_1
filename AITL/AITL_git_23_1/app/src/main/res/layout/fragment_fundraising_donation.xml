@@ -1,0 +1,309 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context="com.allintheloop.Fragment.FundraisingModule.Fundraising_Donation_Fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+
+                    card_view:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+
+                        <TextView
+                            android:id="@+id/make_donate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/txtMakeaDonation"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                        <com.allintheloop.Util.CircularTextView
+                            android:id="@+id/first_donate"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp"
+                            android:text=""
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+
+                        <com.allintheloop.Util.CircularTextView
+                            android:id="@+id/second_donate"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp"
+                            android:text=""
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/linear_more"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/circle"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_10sdp">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/txt_donateMore"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:visibility="visible"
+                                    android:padding="@dimen/_10sdp"
+                                    android:textColor="@color/white"
+                                    android:text="@string/txtDonateMore" />
+
+
+                                <LinearLayout
+                                    android:id="@+id/linear_donateMore"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txt_curreny"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white" />
+
+                                    <EditText
+                                        android:id="@+id/edt_moreAmt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/square_bg"
+                                        android:hint="Enter Amount"
+                                        android:padding="@dimen/_5sdp"
+                                        android:textSize="@dimen/_7sdp" />
+
+                                </LinearLayout>
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_submitdonate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/txtTapHeretosubmityourdonation"
+                            android:textSize="@dimen/_10sdp" />
+
+
+                        <TextView
+                            android:id="@+id/txt_comtt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/txtLeaveaComment"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <EditText
+                            android:id="@+id/edt_commt"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_gravity="top|left"
+                            android:background="@drawable/topedtbackground"
+                            android:inputType="textMultiLine"
+                            android:paddingLeft="10dp"
+                            android:singleLine="false"
+                            android:textColorHint="@color/hintcolor"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_5sdp"
+                    android:padding="@dimen/_20sdp"
+                    card_view:cardCornerRadius="4dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/txt_supporter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/txtSupporters"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear_mainProgress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:visibility="gone">
+
+                            <LinearLayout
+                                android:id="@+id/linear_raised"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/fundring_amount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txt_of"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Of"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/target_amount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linear_progress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <ProgressBar
+                                    android:id="@+id/fund_progress_bar"
+                                    style="@android:style/Widget.ProgressBar.Horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:progressDrawable="@drawable/greenprogress"
+                                    android:minHeight="20dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_viewSupporter"
+                            android:visibility="visible"
+                            android:background="@color/ViewColor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:scrollbars="none" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_footer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/txtMostRecent"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/footer_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

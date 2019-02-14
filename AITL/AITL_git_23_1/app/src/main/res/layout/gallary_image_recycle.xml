@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:padding="3dp"
+    android:layout_height="wrap_content">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:padding="3dp"
+            android:background="@drawable/ring"
+            android:id="@+id/imggallaryimages"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:id="@+id/btn_landscape"
+            android:src="@drawable/ic_landscape"
+            android:visibility="gone"
+            android:layout_gravity="left"/>
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:id="@+id/btndelete"
+            android:src="@drawable/ic_error"
+            android:layout_gravity="left"/>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

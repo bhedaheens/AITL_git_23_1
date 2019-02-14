@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.allintheloop.Fragment.AgendaModule.View_PendingAgenda_Fragment">
+
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_submitnyAgenda"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedcorner"
+            android:text="@string/btnSubmitMyAgenda"
+            android:padding="10dp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:visibility="visible"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/pending_Agenda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabMaxWidth="0dp"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
+            android:minHeight="?android:attr/actionBarSize" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pending_Agenda_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/pending_Agenda" />
+    </LinearLayout>
+
+</LinearLayout>

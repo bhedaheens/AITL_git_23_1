@@ -1,0 +1,266 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/MainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/containerImg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.56">
+
+            <RelativeLayout
+                android:id="@+id/relative_surface"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_black"
+                android:gravity="center_horizontal">
+
+                <com.wonderkiln.camerakit.CameraView
+                    android:id="@+id/camera_surface"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    app:ckPermissions="picture" />
+
+                <ImageView
+                    android:id="@+id/imageViewPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_black"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/imageViewFrame"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="matrix" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white" />
+                </LinearLayout>
+                <!--</RelativeLayout>-->
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_weight="0.13"
+            android:gravity="center"
+            android:background="@color/activity_heartcolor">
+
+            <com.allintheloop.Util.BoldTextView
+                android:id="@+id/txt_seeAllPhoto"
+                android:layout_width="wrap_content"
+                app:font_name="bold"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:padding="7dp"
+                android:textColor="@color/black"
+                android:text="@string/photofilter_my_photos"
+                android:layout_height="wrap_content" />
+
+
+            <com.allintheloop.Util.BoldTextView
+                android:id="@+id/txt_seeAllFilters"
+                android:layout_width="wrap_content"
+                app:font_name="bold"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:padding="7dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/black"
+                android:text="@string/photofilter_see_all_filters"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_photoClick"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.33"
+            android:background="@color/black"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="3">
+
+            <ImageView
+                android:id="@+id/image_share"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_share_photo"
+                android:visibility="invisible" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_buttonClick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|center_vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="@string/photofilter_take_photo"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:font_name="bold" />
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/photo_filter_take_photo" />
+
+                    <ImageView
+                        android:id="@+id/img_previewDone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_check_black_24dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_cameraChange"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/camera_swipe"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/photo_filter_rotate" />
+
+                <com.allintheloop.Util.BoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_camera_photoFilter"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:padding="5dp"
+                    app:font_name="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_shareView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.3"
+            android:background="@color/edittext_backcolor"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_navigation_chevron_left" />
+
+            <ImageView
+                android:id="@+id/img_fbShare"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/facebook_photofiter" />
+
+            <ImageView
+                android:id="@+id/img_twitter_share"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/twitter_photofilter" />
+
+            <ImageView
+                android:id="@+id/img_linkedin_share"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/linkedin_photofilter" />
+
+            <ImageView
+                android:id="@+id/img_internalShare"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/activityfeed_photofilter"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

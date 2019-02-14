@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/addNote"
+        android:orderInCategory="100"
+        android:title="Add Note" />
+
+    <item
+        android:id="@+id/Profile"
+        android:orderInCategory="100"
+        android:title="My Profile"/>
+    <item
+        android:id="@+id/order"
+        android:orderInCategory="100"
+        android:title="Order"/>
+
+    <item
+        android:id="@+id/item"
+        android:orderInCategory="100"
+
+        android:title="Item"/>
+
+    <item
+        android:id="@+id/itm_checkIn"
+        android:orderInCategory="100"
+        android:title="Check In Portal"/>
+
+    <item
+        android:id="@+id/logout"
+        android:orderInCategory="100"
+
+        android:title="Logout"/>
+</menu>

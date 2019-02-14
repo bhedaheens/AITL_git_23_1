@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/frame_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedtextview_graycolor">
+
+        <ImageView
+            android:id="@+id/dailog_profile_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="right|top"
+            android:clickable="true"
+            android:padding="9dp"
+            android:src="@drawable/ic_close_button" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <Button
+                    android:id="@+id/btn_mainDetailswap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/finappBtn"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:text="@string/txtMainDetail"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+
+                <Button
+                    android:id="@+id/btn_contactDetailswap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/finappBtn"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="@string/txtContactInformation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_mainDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txt_fullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:gravity="center"
+                        android:inputType="textCapSentences"
+                        android:padding="@dimen/_3sdp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ProgressBar
+                                android:id="@+id/progressBar1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:visibility="visible" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_image"
+                                android:layout_width="120dp"
+                                android:layout_height="123dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/profile"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/image_profile_close"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_alignEnd="@+id/profile_image"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignRight="@+id/profile_image"
+                                android:visibility="gone"
+                                android:layout_marginRight="-14dp"
+                                android:src="@drawable/ic_error" />
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/txt_selectImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/roundedtextview_graycolor"
+                        android:drawableLeft="@drawable/ic_landscape_white"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="9dp"
+                        android:paddingTop="8dp"
+                        android:text="@string/txtSelectImage"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/img_linkedin"
+                        android:layout_width="250dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ln_connectnbrn" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+
+                    <EditText
+                        android:id="@+id/edt_salutation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/edtSalutation"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/firstName"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_lastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/lastName"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+
+                    <EditText
+                        android:id="@+id/edt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/edtTitle"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/txtcmpName"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:editable="false"
+                        android:hint="@string/emailText"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <Button
+                        android:id="@+id/btn_submit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/survey_btn"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:text="@string/btnUpdate"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_contactDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_8sdp">
+
+
+                    <EditText
+                        android:id="@+id/edt_contactEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:editable="false"
+                        android:hint="@string/emailText"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/passwordText"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:password="true"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_Cpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/edtcnfPassword"
+                        android:inputType="textPersonName"
+                        android:padding="12dp"
+                        android:password="true"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_linkedUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/edtLinkedIn"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_fbUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/edtfacebookUrl"
+                        android:inputType="textCapSentences"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+                    <EditText
+                        android:id="@+id/edt_twitterUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:hint="@string/edtTwitterUrl"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+
+                    <EditText
+                        android:id="@+id/edt_contactNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/topedtbackground"
+                        android:editable="false"
+                        android:hint="@string/edtMobileNo"
+                        android:inputType="number"
+                        android:padding="12dp"
+                        android:textSize="17dp" />
+
+
+                    <TextView
+                        android:id="@+id/spr_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="7dp"
+                        android:background="@drawable/spinnerbackground"
+                        android:clickable="true"
+                        android:drawableRight="@drawable/ic_navigation_arrow_drop_down"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:text="@string/selectCountry"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/btn_contactsubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/survey_question"
+                        android:drawableRight="@drawable/ic_right_arrow"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:text="@string/btnUpdate"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

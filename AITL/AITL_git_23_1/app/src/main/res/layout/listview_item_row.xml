@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="2dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/EventLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="marquee"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/event_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/ViewColor"
+            android:ellipsize="marquee"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textSize="20dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="1dp"
+            android:background="@color/black"
+            android:ellipsize="marquee"
+            android:padding="10dp"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white" />
+
+    </LinearLayout>

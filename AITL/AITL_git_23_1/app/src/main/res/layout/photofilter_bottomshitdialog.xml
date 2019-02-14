@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.allintheloop.Util.BoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        app:font_name="bold"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:text="Share On" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="5"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_fb"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="Facebook" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/GrayColor"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/txt_twiiter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="Twitter" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/GrayColor"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/txt_linkedin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="LinkedIn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/GrayColor"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/txt_activityFeed"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="ActivityFeed" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/GrayColor"
+            android:layout_height="1dp"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

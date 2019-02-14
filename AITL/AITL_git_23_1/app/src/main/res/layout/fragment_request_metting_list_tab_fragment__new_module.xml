@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.allintheloop.Fragment.RequestMeetingModule.RequestMettingListChildTab_NewModule">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.design.widget.TabLayout
+        android:id="@+id/mettingType_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ViewColor"
+        android:minHeight="?android:attr/actionBarSize"
+        app:tabGravity="fill"
+        app:tabMaxWidth="0dp"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/black"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/MyCustomTextAppearance" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mettingType_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

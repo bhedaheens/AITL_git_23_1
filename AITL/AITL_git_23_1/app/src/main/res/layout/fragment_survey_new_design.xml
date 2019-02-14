@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context="com.allintheloop.Fragment.SurveyModule.Survey_Fragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear_nodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/app_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        card_view:cardCornerRadius="2dp"
+                        card_view:cardElevation="1dp">
+
+                        <TextView
+                            android:id="@+id/txt_noData"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:padding="20dp"
+                            android:text="There are no uncompleted surveys available, thank you for participating."
+                            android:textSize="20dp" />
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear_start_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <WebView
+                        android:id="@+id/webView_start"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent" />
+
+                    <Button
+                        android:id="@+id/btn_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/img_survey"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/survey_welcome_icon"/>
+
+
+                </LinearLayout>
+
+
+
+                <!-- TODO: Update blank fragment layout -->
+                <LinearLayout
+                    android:id="@+id/linear_question_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+
+                    <ProgressBar
+                        android:id="@+id/survey_progress"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="20dp" />
+
+                    <com.allintheloop.Util.HomeCustomViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="3">
+
+                        <Button
+                            android:id="@+id/btn_back"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/survey_btn"
+                            android:text="@string/left_arrow"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/btn_next"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="70dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/survey_btn"
+                            android:text="@string/right_arrow"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/btn_Qsfinish"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="70dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/survey_btn"
+                            android:text="@string/right_arrow1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_end_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <WebView
+                        android:id="@+id/webView_thanku"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/btn_finish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnFinish"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

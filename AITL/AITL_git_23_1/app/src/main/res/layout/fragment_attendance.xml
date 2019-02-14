@@ -1,0 +1,210 @@
+<RelativeLayout
+    android:id="@+id/MainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context="com.allintheloop.Activity.EventList_Activity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Data"
+        android:layout_width="fill_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:id="@+id/linear_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/frame_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <WebView
+                        android:id="@+id/headerAdd_webView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/headerAdd_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/headerAdd_webView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/header_btndelete"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignEnd="@+id/headerAdd_image"
+                        android:layout_alignRight="@+id/headerAdd_image"
+                        android:layout_below="@+id/headerAdd_webView"
+                        android:layout_gravity="right"
+                        android:clickable="true"
+                        android:src="@drawable/ic_error"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/textViewAttendee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Delegates will appear in the directory once they have logged into this app"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+
+                        android:id="@+id/edt_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/search_rounded"
+                        android:drawableLeft="@android:drawable/ic_menu_search"
+                        android:hint="@string/searchText"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_seeRequestExhibitor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/edt_search"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/btnSeeMeetingReuqest"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_viewAttendance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/textViewNoDATA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="@string/txtNoDataFound"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/frame_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/footerAdd_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="150dp"
+                        android:layout_below="@+id/footerAdd_webView"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+
+                    <ImageView
+                        android:id="@+id/footer_btndelete"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignEnd="@+id/footerAdd_image"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignRight="@+id/footerAdd_image"
+                        android:layout_gravity="right"
+                        android:clickable="true"
+                        android:src="@drawable/ic_error"
+                        android:visibility="gone" />
+
+                    <WebView
+                        android:id="@+id/footerAdd_webView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_forceLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_nologin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/txt_forceLogin"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

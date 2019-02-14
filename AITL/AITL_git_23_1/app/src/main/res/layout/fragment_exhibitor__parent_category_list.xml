@@ -1,0 +1,132 @@
+<RelativeLayout
+    android:id="@+id/MainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.allintheloop.Activity.EventList_Activity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Data"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:background="@color/white">
+
+        <!--<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--xmlns:tools="http://schemas.android.com/tools"-->
+            <!--android:id="@+id/scrollView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+
+            <LinearLayout
+                android:id="@+id/Container_Attendance"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/textViewAttendee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:gravity="center_horizontal"
+                    android:text="Delegates will appear in the directory once they have logged into this app"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+
+                        android:id="@+id/edt_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/search_rounded"
+                        android:drawableLeft="@android:drawable/ic_menu_search"
+                        android:hint="@string/searchText"
+                        android:imeOptions="actionSearch"
+                        android:padding="10dp"
+                        android:singleLine="true" />
+
+
+                </RelativeLayout>
+
+
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_viewCategoryListing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/textViewNoDATA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="@string/txtNoDataFound"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="gone" />
+
+
+
+            </LinearLayout>
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_forceLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_nologin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/txt_forceLogin"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

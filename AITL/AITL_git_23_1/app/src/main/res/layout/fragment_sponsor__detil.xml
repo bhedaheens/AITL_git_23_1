@@ -1,0 +1,320 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/linear_wholelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_sponsorType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <com.allintheloop.Util.CoordinatedImageView
+                android:id="@+id/img_frame"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_gravity="center">
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/spon_img"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/txt_profileName"
+                    android:layout_width="155dp"
+                    android:layout_height="155dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="60sp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/sponser_fav"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:src="@drawable/ic_star_normal"
+                    android:visibility="gone" />
+
+
+            </com.allintheloop.Util.CoordinatedImageView>
+
+            <RelativeLayout
+                android:id="@+id/app_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_toStartOf="@+id/right_arraow"
+                        android:layout_toLeftOf="@+id/right_arraow"
+                        android:orientation="vertical">
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/spon_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            app:font_name="bold"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/txt_cmpnyname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            app:font_name="bold"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="20sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/middle_card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.allintheloop.Util.BoldTextView
+                    android:id="@+id/spon_companyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    app:font_name="bold"
+                    android:textColor="@color/speaker_list_titleColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linear_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center|center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/txt_visitWebsite"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/transparent_white_border"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp"
+                        android:text="@string/visitwebsite"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/darkGrayColor"
+                        android:textStyle="bold"
+                        app:font_name="bold" />
+
+
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/exhi_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/linear_social"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/btn_linkin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_back"
+                        android:drawableRight="@drawable/ic_navigation_chevron_right"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Linkedin"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textColor="@color/speaker_list_titleColor"
+                        app:font_name="regular" />
+
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/btn_twitter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+
+                        android:drawableRight="@drawable/ic_navigation_chevron_right"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:textSize="17sp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Twitter"
+                        android:textStyle="bold"
+                        android:textColor="@color/speaker_list_titleColor"
+                        android:visibility="gone"
+                        app:font_name="regular" />
+
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/btn_fb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_back"
+
+                        android:drawableRight="@drawable/ic_navigation_chevron_right"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:textSize="17sp"
+                        android:paddingBottom="5dp"
+                        android:text="Facebook"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textColor="@color/speaker_list_titleColor"
+                        app:font_name="regular" />
+
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/btn_insta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+
+                        android:drawableRight="@drawable/ic_navigation_chevron_right"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:textSize="17sp"
+                        android:paddingBottom="5dp"
+                        android:text="Instagram"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textColor="@color/speaker_list_titleColor"
+                        app:font_name="regular" />
+
+
+                    <com.allintheloop.Util.BoldTextView
+                        android:id="@+id/btn_youtube"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/card_back"
+                        android:drawableRight="@drawable/ic_navigation_chevron_right"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:textSize="17sp"
+                        android:paddingBottom="5dp"
+                        android:text="Youtube"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:textColor="@color/speaker_list_titleColor"
+                        app:font_name="regular" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_nosponsor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/textwholeNoDATA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="No Sponsor Detail Found"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/colorPrimary"
+            android:visibility="visible" />
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

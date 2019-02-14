@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="com.allintheloop.Fragment.Agenda_Fragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_Data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/frame_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+
+                <WebView
+                    android:id="@+id/headerAdd_webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/headerAdd_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/headerAdd_webView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/header_btndelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignEnd="@+id/headerAdd_image"
+                    android:layout_alignRight="@+id/headerAdd_image"
+                    android:layout_below="@+id/headerAdd_webView"
+                    android:layout_gravity="right"
+                    android:clickable="true"
+                    android:src="@drawable/ic_error"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/exhibitor_leadTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:minHeight="?android:attr/actionBarSize"
+                    app:tabGravity="fill"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="fixed"
+                    app:tabTextAppearance="@style/MyCustomTextAppearance" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/exhibitor_leadViewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Agenda_tab_layout" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/frame_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/footerAdd_image"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/footerAdd_webView"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/noimage"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/footer_btndelete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignEnd="@+id/footerAdd_image"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/footerAdd_image"
+                android:layout_gravity="right"
+                android:clickable="true"
+                android:src="@drawable/ic_error"
+                android:visibility="gone" />
+
+            <WebView
+                android:id="@+id/footerAdd_webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_forceLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+
+            <TextView
+                android:id="@+id/txt_nologin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/txt_forceLogin"
+                android:textSize="20dp" />
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

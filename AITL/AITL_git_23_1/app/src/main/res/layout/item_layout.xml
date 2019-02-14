@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/app_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+
+
+            <FrameLayout
+                android:id="@+id/img_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:layout_gravity="center">
+
+
+                <!--<ProgressBar-->
+                <!--android:id="@+id/progressBar1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:visibility="visible"-->
+                <!--android:layout_gravity="center_vertical" />-->
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/user_sqrimage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right|center_vertical"
+                    android:src="@drawable/defult_attende"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_profileName"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_frame"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/linear_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_toLeftOf="@+id/img_star"
+                        android:layout_toStartOf="@+id/img_star"
+
+                        android:orientation="vertical">
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/user_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            card_view:font_name="bold"
+                            android:textStyle="bold"
+                            android:textColor="@color/speaker_list_titleColor"
+                            android:textSize="14sp" />
+
+                        <com.allintheloop.Util.BoldTextView
+                            android:id="@+id/user_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:text=""
+                            card_view:font_name="regular"
+                            android:textColor="@color/speaker_list_subtitleColor"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_star"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="5dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical|center_horizontal"
+                        android:src="@drawable/ic_star_normal"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/breakline"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/img_frame"
+                    android:layout_below="@+id/img_frame"
+                    android:background="@color/speaker_list_lineColor"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

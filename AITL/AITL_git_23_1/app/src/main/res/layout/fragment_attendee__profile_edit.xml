@@ -1,0 +1,421 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/frame_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundedtextview_graycolor">
+
+        <ImageView
+            android:id="@+id/dailog_profile_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="right|top"
+            android:clickable="true"
+            android:padding="9dp"
+            android:src="@drawable/ic_close_button" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/frame_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.9">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="8dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <ProgressBar
+                                android:id="@+id/progressBar1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:visibility="visible" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/profile_image"
+                                android:layout_width="130dp"
+                                android:layout_height="130dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:src="@drawable/profile"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/image_profile_edit"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_alignEnd="@+id/profile_image"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignRight="@+id/profile_image"
+                                android:src="@drawable/shape_edit_icon"
+                                android:visibility="visible" />
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lbl_firstname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="5dp"
+                        android:text="First Name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/GrayColor"
+                        android:textSize="11dp" />
+
+
+                    <EditText
+                        android:id="@+id/txt_firstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_plain_background"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textColor="@color/beaconfound_text"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/lbl_surName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="5dp"
+                        android:text="LastName"
+                        android:textAllCaps="true"
+                        android:textColor="@color/GrayColor"
+                        android:textSize="11dp" />
+
+
+                    <EditText
+                        android:id="@+id/txt_surName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_plain_background"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textColor="@color/beaconfound_text"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/lbl_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="5dp"
+                        android:text="company"
+                        android:textAllCaps="true"
+                        android:textColor="@color/GrayColor"
+                        android:textSize="11dp" />
+
+
+                    <EditText
+                        android:id="@+id/txt_company"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_plain_background"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textColor="@color/beaconfound_text"
+                        android:textSize="16dp" />
+
+
+                    <TextView
+                        android:id="@+id/lbl_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="5dp"
+                        android:text="title"
+                        android:textAllCaps="true"
+                        android:textColor="@color/GrayColor"
+                        android:textSize="11dp" />
+
+
+                    <EditText
+                        android:id="@+id/txt_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_plain_background"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:text=""
+                        android:textColor="@color/beaconfound_text"
+                        android:textSize="16dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:padding="10dp"
+                android:background="@color/edittext_backcolor"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/lbl_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:padding="5dp"
+                    android:text="email"
+                    android:textAllCaps="true"
+                    android:textColor="@color/GrayColor"
+                    android:textSize="12dp" />
+
+
+                <EditText
+                    android:id="@+id/txt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/edittext_backcolor"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textColor="@color/beaconfound_text"
+                    android:textSize="16dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="8dp"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lbl_password"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:padding="5dp"
+                            android:text="Password"
+                            android:textAllCaps="true"
+                            android:textColor="@color/GrayColor"
+                            android:textSize="12dp" />
+
+
+                        <EditText
+                            android:id="@+id/txt_password"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/edittext_backcolor"
+                            android:inputType="textPassword"
+                            android:maxLines="2"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/beaconfound_text"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_reTypePassword"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/lbl_repassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:padding="5dp"
+                            android:text="retype password"
+                            android:textAllCaps="true"
+                            android:textColor="@color/GrayColor"
+                            android:textSize="12dp" />
+
+
+                        <EditText
+                            android:id="@+id/txt_repassword"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginRight="11dp"
+                            android:background="@color/edittext_backcolor"
+                            android:inputType="textPassword"
+                            android:padding="5dp"
+                            android:text=""
+                            android:textColor="@color/beaconfound_text"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/btnface_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/btnLoginWithFace"
+                    android:layout_width="200dp"
+                    android:layout_height="87dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/facebook_icon"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_linkedin"
+                    android:layout_width="200dp"
+                    android:layout_height="87dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-20dp"
+                    android:src="@drawable/ln_connectnbrn"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_additional"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_accpet_layout"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/btn_clearData"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_accpet_layout"
+                    android:text="Back"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_done"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_accpet_layout"
+                    android:text="Done"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

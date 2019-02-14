@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Fragment.EditProfileModule.ProfileEditGolas_Activity">
+
+    <RelativeLayout
+        android:id="@+id/linear_topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_navigation_chevron_left" />
+
+
+        <com.allintheloop.Util.BoldTextView
+            android:layout_width="wrap_content"
+            android:text="@string/edit_your_goals"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:font_name="bold"
+            android:paddingLeft="2dp"
+            android:textStyle="bold"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_topLayout"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.allintheloop.Util.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Goals"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                app:font_name="bold" />
+
+            <com.allintheloop.Util.BoldTextView
+                android:id="@+id/txt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="0/140"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:font_name="bold" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/edt_goals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edittext_roundedcornar_profile"
+            android:lines="5"
+            android:maxLines="5"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:gravity="top|left"
+            android:scrollbars="vertical" />
+
+        <com.allintheloop.Util.BoldTextView
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/attendee_profile_goal_edit_drawable"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Save"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:font_name="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

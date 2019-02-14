@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/linear_staticData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:id="@+id/txt_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:padding="8dp"
+                android:text="Close"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_salutation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="Salutation"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_salutation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_firstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="First Name"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/lbl_surName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="LastName"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_surName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="title"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/lbl_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="company"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/lbl_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="Email Address"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lbl_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="Phone"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:inputType="phone"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/lbl_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="2dp"
+                android:text="Country"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+
+            <EditText
+                android:id="@+id/edt_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_rounded_white_profile"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/beaconfound_text"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_dynamicData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Next" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Save" />
+
+</LinearLayout>

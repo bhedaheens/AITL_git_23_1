@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@color/white"
+    tools:context="com.allintheloop.Fragment.cms.Webview_Fragment">
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/img_download"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:clickable="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_action_get_app"
+            android:layout_width="wrap_content"/>
+</FrameLayout>
